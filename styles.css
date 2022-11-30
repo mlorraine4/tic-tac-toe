@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Crayon";
+  src: url(DkCoolCrayon-xJyV.ttf);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: "Crayon";
+}
+
+img {
+  position: absolute;
+  height: 120vh;
+  width: 100vw;
+}
+
+.startingPage {
+  position: absolute;
+  text-align: center;
+  background-color: #6410E0;
+  border-radius: 8px;
+  border: 2px dotted white;
+  top: 40px;
+  padding: 10px;
+}
+
+.game {
+  position: absolute;
+  display: none;
+}
+
+.gameboard {
+  display: grid;
+  height: 400px;
+  width: 400px;
+  margin: 20px;
+  grid-template-rows: repeat(3, 33.4%);
+  grid-template-columns: repeat(3, 33.4%);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #6410E0;
+  border-radius: 8px;
+  font-weight: bolder;
+}
+
+.positions {
+  border: 2px solid #6410E0;
+  font-size: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pageTitle {
+  font-size: 40px;
+  padding: 10px;
+  color: #62F4E7;
+  margin-bottom: 10px;
+  font-weight: bold;
+
+}
+
+#gameTitle {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+  background-color: #6410E0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #24E8FF;
+}
+
+button {
+  background-color: #F7C832;
+  color: #6410E0;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: "Crayon";
+}
+
+button:hover {
+  border: 2px solid white;
+  font-size: 26px;
+}
+
+.restartBtn {
+  margin: 0;
+}
+
+.restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-weight: bold;
+}
