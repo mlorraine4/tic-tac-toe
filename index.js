@@ -1,7 +1,7 @@
 
 
 const game = () => {
-
+// change page style
   displayBoard();
 
   var continueGame = true;
@@ -18,16 +18,12 @@ const game = () => {
   const player2 = Player('p2', 'O', false);
 
 
-// event listener sends gameboard move to be checked, and there has not been a winner
+// event listener sends gameboard move to be checked if there has not been a winner
   var board = document.querySelector('.gameboard');
   board.addEventListener('click', handleClick, false);
 
   function handleClick(event) {
-    if (continueGame === false) {
-      console.log('end of game');
-    }
     if ( continueGame === true) {
-      console.log('clicked');
     var currentPosition = event.target.id;
     checkChoice(currentPosition);
     }
@@ -99,17 +95,17 @@ const game = () => {
 
   // resets gameboard displays and game variables
   function restartGame() {
-    
-    
+    // removes original event listener by replacing div with its clone
     board.replaceWith(board.cloneNode(true));
-
+    // clear styling
     document.querySelector('#gameTitle').innerHTML = "Player 1's turn";
-
     var positions = document.querySelectorAll('.positions');
     for (var i=0; i < positions.length; i++) {
       positions[i].innerHTML = ""
     };
-    
+
+    game();
+
   };
 
   return { restartGame };
