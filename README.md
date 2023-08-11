@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Tic-Tac-Toe</h1>
+<h1 align='center'>Tic-Tac-Toe</h1>
 
 
 ![Preview](/images/preview.png)
